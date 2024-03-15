@@ -11,13 +11,13 @@ const ContactForm = () => {
   const contacts = useSelector(selectContacts);
 
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setPhone] = useState('');
 
   const handleChange = e => {
     if (e.target.name === 'name') {
       setName(e.target.value);
-    } else if (e.target.name === 'number') {
-      setNumber(e.target.value);
+    } else if (e.target.name === 'phone') {
+      setPhone(e.target.value);
     }
   };
 
@@ -32,9 +32,9 @@ const ContactForm = () => {
     if (isDuplicate) {
       alert(`${name} is already in contacts!`);
     } else {
-      dispatch(addContact({ id: nanoid(), name, number }));
+      dispatch(addContact({ id: nanoid(), name, phone }));
       setName('');
-      setNumber('');
+      setPhone('');
     }
   };
 
@@ -54,14 +54,14 @@ const ContactForm = () => {
       />
 
       <label className={css.label} htmlFor="tel">
-        Number
+        Phone
       </label>
       <input
         className={css.input}
         id="tel"
         type="tel"
-        name="number"
-        value={number}
+        name="phone"
+        value={phone}
         onChange={handleChange}
         required
       />

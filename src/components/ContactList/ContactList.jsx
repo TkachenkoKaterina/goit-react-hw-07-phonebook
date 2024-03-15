@@ -9,6 +9,7 @@ import { deleteContact, fetchContacts } from 'store/operations';
 const ContactList = () => {
   const dispatch = useDispatch();
   const filteredContacts = useSelector(selectFilteredContacts);
+  console.log('filteredContacts :>> ', filteredContacts);
 
   useEffect(() => {
     dispatch(fetchContacts());

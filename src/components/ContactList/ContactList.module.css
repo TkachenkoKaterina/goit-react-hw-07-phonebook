@@ -1,4 +1,9 @@
-ul {
+.ul {
   list-style: none;
   padding: 0;
+}
+
+.titleSecond {
+  margin: 0;
+  color: rgb(58, 58, 58);
 }

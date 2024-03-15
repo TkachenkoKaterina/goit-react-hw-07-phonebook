@@ -14,7 +14,7 @@ const Filter = () => {
   };
 
   return (
-    <div>
+    <div className={css.filter}>
       FindContact
       <input
         className={css.input}

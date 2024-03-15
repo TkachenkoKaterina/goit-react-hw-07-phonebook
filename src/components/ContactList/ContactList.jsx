@@ -20,6 +20,7 @@ const ContactList = () => {
 
   return (
     <div>
+      {filteredContacts && <h2 className={css.titleSecond}>Contacts</h2>}
       <ul className={css.ul}>
         {filteredContacts.map(contact => {
           return (

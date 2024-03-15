@@ -1,6 +1,10 @@
-input {
+.input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-left: 15px;
+}
+
+.filter {
+  margin-top: 24px;
 }

@@ -20,18 +20,22 @@ const ContactList = () => {
 
   return (
     <div>
-      {filteredContacts && <h2 className={css.titleSecond}>Contacts</h2>}
-      <ul className={css.ul}>
-        {filteredContacts.map(contact => {
-          return (
-            <ContactItem
-              key={contact.id}
-              contact={contact}
-              onDeleteContact={handleDeleteContact}
-            />
-          );
-        })}
-      </ul>
+      {filteredContacts && (
+        <>
+          <h2 className={css.titleSecond}>Contacts</h2>
+          <ul className={css.ul}>
+            {filteredContacts.map(contact => {
+              return (
+                <ContactItem
+                  key={contact.id}
+                  contact={contact}
+                  onDeleteContact={handleDeleteContact}
+                />
+              );
+            })}
+          </ul>
+        </>
+      )}
     </div>
   );
 };

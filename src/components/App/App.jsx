@@ -1,3 +1,4 @@
+import Filter from 'components/Filter/Filter';
 import React from 'react';
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
@@ -8,6 +9,7 @@ export const App = () => {
     <div className={css.container}>
       <h1 className={css.titleFirst}>Phonebook</h1>
       <ContactForm />
+      <Filter />
       <h2 className={css.titleFSecond}>Contacts</h2>
       <ContactList />
     </div>

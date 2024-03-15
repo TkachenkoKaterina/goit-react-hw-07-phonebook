@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ContactItem from 'components/ContactItem/ContactItem';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFilteredContacts } from 'store/selectors';
@@ -36,9 +36,9 @@ const ContactList = () => {
   );
 };
 
-// ContactList.propTypes = {
-//   contacts: PropTypes.array,
-//   onDeleteContact: PropTypes.func,
-// };
+ContactList.propTypes = {
+  contacts: PropTypes.array,
+  onDeleteContact: PropTypes.func,
+};
 
 export default ContactList;

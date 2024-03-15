@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFilter } from 'store/selectors';
@@ -27,9 +27,9 @@ const Filter = () => {
   );
 };
 
-// Filter.propTypes = {
-//   value: PropTypes.string.isRequired,
-//   onChange: PropTypes.func.isRequired,
-// };
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};
 
 export default Filter;

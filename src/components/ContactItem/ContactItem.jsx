@@ -1,12 +1,8 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './ContactItem.module.css';
-// import { useDispatch } from 'react-redux';
-// import { deleteContact } from 'store/operations';
 
 const ContactItem = ({ contact, onDeleteContact }) => {
-  // const dispatch = useDispatch();
-
   const handleDeleteContact = () => {
     onDeleteContact(contact.id);
   };
@@ -21,13 +17,13 @@ const ContactItem = ({ contact, onDeleteContact }) => {
   );
 };
 
-// ContactItem.propTypes = {
-//   contact: PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//     name: PropTypes.string.isRequired,
-//     number: PropTypes.string.isRequired,
-//   }).isRequired,
-//   onDeleteContact: PropTypes.func,
-// };
+ContactItem.propTypes = {
+  contact: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string,
+  }).isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
+};
 
 export default ContactItem;

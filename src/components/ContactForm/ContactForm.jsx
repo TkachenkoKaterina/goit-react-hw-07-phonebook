@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'store/selectors';
 import { nanoid } from '@reduxjs/toolkit';
 
-const ContactForm = ({ onSubmit }) => {
+const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
